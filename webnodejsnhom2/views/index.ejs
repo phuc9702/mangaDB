@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> MANGA</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>Danh sách MANGA ở đây </h1>
+<table border="1">
+<tr>
+    <th>id</th>
+<th>titles</th>
+<th>author</th>
+<th>chapters</th>
+<th> <a href="/form-add"> Thêm</a> </th>
+</tr>
+<% ds.forEach(item => { %>
+<tr>
+<td> <%= item._id %></td>
+<td> <%= item.titles %></td>
+<td> <%= item.author %></td>
+<td> <%= item.chapters %></td>
+<td> <a href="/form-update/<%=item._id%>"> Update </a> || <a href="/form-delete/<%=item._id%>"> Delete </a> </td>
+</a<>
+<% }) %>
+</table>
+<p></p>
+</body>
+</html>
